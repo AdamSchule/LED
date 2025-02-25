@@ -1,0 +1,23 @@
+from gpiozero import LED, Button
+from time import sleep
+import datetime
+
+led1=LED(22)
+led2=LED(6)
+led3=LED(17)
+led4=LED(19)
+led5=LED(18)
+pin_in = Button(4)
+
+while True:
+    
+    if pin_in.is_pressed:
+        text = open('test.txt', 'a')
+        led3.on()
+        text.write('ich leuchte\n')
+        sleep(0.5)
+        print('wird geschrieben')
+        text.close()
+    else:
+        led3.off()
+
