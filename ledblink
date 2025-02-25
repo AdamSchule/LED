@@ -1,0 +1,31 @@
+from gpiozero import LED
+from time import sleep
+led1=LED(22)
+led2=LED(6)
+led3=LED(17)
+led4=LED(19)
+led5=LED(18)
+
+while True:
+    led1.on()
+    sleep(0.10)
+    led1.off()
+    led2.on()
+    sleep(0.30)
+    led3.on()
+    sleep(0.30)
+    if led3.on:
+        for i in range(0,10):
+            led5.on()
+            sleep(0.1)
+            led5.off()
+            sleep(0.1)
+    led2.off()
+    sleep(0.10)
+    led4.on()
+    led3.off()
+    sleep(0.10)
+    led4.off()
+    sleep(0.10)
+    
+
